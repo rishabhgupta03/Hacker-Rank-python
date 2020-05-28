@@ -1,0 +1,12 @@
+m=int(input())
+mset = set()
+mset.update(input().split())
+n=int(input())
+nset = set()
+nset.update(input().split())
+d1 = sorted(mset.difference(nset))
+d2 = sorted(nset.difference(mset))
+dset = set()
+dset.update(d1, d2)
+for i in sorted(dset, key=int):
+    print(i)

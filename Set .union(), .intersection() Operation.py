@@ -1,0 +1,8 @@
+n = int(input())
+english = set(map(int, input().split()))
+b = int(input())
+french = set(map(int, input().split()))
+set_union = english.union(french)
+set_intersection = english.intersection(french)
+print(len(set_union))
+print(len(set_intersection))
