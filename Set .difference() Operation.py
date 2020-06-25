@@ -1,0 +1,8 @@
+n = input()
+english = input().split()
+m=input()
+french = input().split()
+s1=set(english)
+s2=set(french)
+ds = s1.difference(s2)
+print(len(ds))
