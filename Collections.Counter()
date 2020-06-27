@@ -1,0 +1,17 @@
+from collections import Counter
+total=0
+X = int(input())
+shoes = input().split()
+N = int(input())
+co = Counter(shoes)
+for i in range(N):
+    size,price = input().split()
+    if size in shoes:
+        if co.get(size) == None:
+            continue
+        else:
+            total = total+int(price)
+            shoes.remove(size)
+    else:
+        continue
+print(total)
