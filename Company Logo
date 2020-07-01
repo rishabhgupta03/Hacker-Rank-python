@@ -1,0 +1,18 @@
+import math
+import os
+import random
+import re
+import sys
+from collections import OrderedDict
+if __name__ == '__main__':
+    s = sorted(input())
+    od = OrderedDict()
+    for i in range(len(s)):
+        if s[i] not in od:
+            od[s[i]] = 1
+        else:
+            od[s[i]] += 1
+    sod = dict(sorted(od.items(), key = lambda x:x[1], reverse = True))
+    out = dict(list(sod.items())[0: 3])
+    for key,value in out.items():
+        print(key, value)
